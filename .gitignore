@@ -1,0 +1,31 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Java
+*.class
+
+# Build
+target/
+bin/
+
+# Server
+Servers/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+*.env
+
+# Google OAuth credentials
+google-oauth.properties
+
+# Database credentials
+application-local.properties

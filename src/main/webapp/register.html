@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#181824,#24243e,#1f1c2c,#3d1d15);
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Animated Background */
+
+@keyframes bgAnimation{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Glowing Background */
+
+body::before{
+
+content:"";
+position:absolute;
+width:320px;
+height:320px;
+background:#ff7b39;
+border-radius:50%;
+filter:blur(130px);
+top:-120px;
+left:-120px;
+opacity:.25;
+}
+
+body::after{
+
+content:"";
+position:absolute;
+width:320px;
+height:320px;
+background:#ffb347;
+border-radius:50%;
+filter:blur(130px);
+bottom:-120px;
+right:-120px;
+opacity:.25;
+}
+
+/* Floating Food Images */
+
+.food{
+position:absolute;
+width:80px;
+height:80px;
+border-radius:50%;
+object-fit:cover;
+opacity:.35;
+animation:floatFood linear infinite;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+.food1{
+left:8%;
+animation-duration:15s;
+animation-delay:0s;
+}
+
+.food2{
+left:25%;
+animation-duration:18s;
+animation-delay:3s;
+}
+
+.food3{
+left:48%;
+animation-duration:14s;
+animation-delay:1s;
+}
+
+.food4{
+left:70%;
+animation-duration:17s;
+animation-delay:4s;
+}
+
+.food5{
+left:90%;
+animation-duration:16s;
+animation-delay:2s;
+}
+
+@keyframes floatFood{
+
+0%{
+transform:translateY(110vh) rotate(0deg);
+}
+
+100%{
+transform:translateY(-150px) rotate(360deg);
+}
+
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:10;
+}
+
+.register-box{
+    width:420px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+    animation:cardFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes cardFloat{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+.register-box h1{
+
+text-align:center;
+font-size:34px;
+margin-bottom:8px;
+background:linear-gradient(90deg,#ff7b39,#ffd166,#ff7b39);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:titleAnimation 5s linear infinite;
+}
+
+@keyframes titleAnimation{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:200%;
+}
+
+}
+
+.register-box p{
+    text-align:center;
+    color:#ddd;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    color:#fff;
+    margin-bottom:7px;
+    font-size:15px;
+    font-weight:500;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+
+    width:100%;
+    padding:13px 15px;
+    background:#2b2a3d;
+    color:#fff;
+    border:2px solid transparent;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.35s;
+}
+
+.input-group input:hover,
+.input-group textarea:hover,
+.input-group select:hover{
+
+transform:scale(1.02);
+
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus{
+
+border-color:#ff7b39;
+box-shadow:0 0 10px rgba(255,123,57,.5);
+
+}
+
+.input-group textarea{
+    resize:none;
+    height:90px;
+}
+
+.input-group select{
+    cursor:pointer;
+}
+
+::placeholder{
+    color:#bbb;
+}
+
+button{
+
+width:100%;
+padding:14px;
+border:none;
+border-radius:30px;
+background:linear-gradient(to right,#ff7b39,#ffb347);
+color:white;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:.35s;
+position:relative;
+overflow:hidden;
+
+}
+
+button::before{
+
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:80%;
+height:100%;
+background:rgba(255,255,255,.4);
+transform:skewX(-25deg);
+
+}
+
+button:hover::before{
+
+left:140%;
+transition:.8s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(255,150,50,.45);
+
+}
+
+.login{
+    text-align:center;
+    margin-top:18px;
+    color:#ddd;
+    font-size:15px;
+}
+
+.login a{
+    color:#ffb347;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.login a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:480px){
+
+.register-box{
+width:92%;
+padding:25px;
+}
+
+.food{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+    <div class="register-box">
+
+        <h1>Create Account</h1>
+
+        <p>Sign up to start ordering your favorite food.</p>
+
+    <form action="register" method="post">
+
+    <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter password" required>
+    </div>
+
+    <div class="input-group">
+        <label>Address</label>
+        <textarea name="address" placeholder="Enter your address" required></textarea>
+    </div>
+
+    <div class="input-group">
+        <label>Select Role</label>
+        <select name="role" required>
+            <option value="">-- Select Role --</option>
+            <option value="Customer">Customer</option>
+            <option value="Restaurant">Restaurant</option>
+            <option value="Delivery Partner">Delivery Partner</option>
+            <option value="Admin">Admin</option>
+        </select>
+    </div>
+
+    <button type="submit">Sign Up</button>
+
+    <div class="login">
+        Already have an account?
+        <a href="login.html">Login</a>
+    </div>
+
+</form>
+
+    </div>
+
+</div>
+
+</body>
+<img class="food food1" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300" alt="Pizza">
+
+<img class="food food2" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300" alt="Burger">
+
+<img class="food food3" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=300" alt="Biryani">
+
+<img class="food food4" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300" alt="Salad">
+
+<img class="food food5" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300" alt="Food">
+</html>

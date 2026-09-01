@@ -1,0 +1,6 @@
+# Copy this file as google-oauth.properties
+# and replace the placeholders with your own credentials.
+
+google.clientId=YOUR_GOOGLE_CLIENT_ID
+google.clientSecret=YOUR_GOOGLE_CLIENT_SECRET
+google.redirectUri=http://localhost:8080/firstJEEproject/oauth2callback
