@@ -437,11 +437,7 @@ This project demonstrates practical knowledge of:
 
 Planned improvements include:
 
-* [ ] Spring Boot migration
-* [ ] Spring Security
-* [ ] JWT authentication
 * [ ] REST API architecture
-* [ ] Online payment gateway integration
 * [ ] Admin dashboard
 * [ ] Restaurant owner dashboard
 * [ ] Order tracking
@@ -468,9 +464,5 @@ Interested in backend development, scalable applications and modern software tec
 
 Give the repository a ⭐ and feel free to explore the code.
 
----
 
-## 📄 License
-
-This project is developed for educational and portfolio purposes.
 
