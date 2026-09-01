@@ -12,6 +12,8 @@
 <img src="https://img.shields.io/badge/JSP-Servlets-8A2BE2?style=for-the-badge" alt="JSP">
 <img src="https://img.shields.io/badge/JDBC-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="JDBC MySQL">
 <img src="https://img.shields.io/badge/HTML-CSS-JavaScript-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML CSS JavaScript">
+<img alt="Static Badge" src="https://img.shields.io/badge/HTML%20and%20css">
+
 <img src="https://img.shields.io/badge/Tomcat-10-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=black" alt="Tomcat">
 <img src="https://img.shields.io/badge/Google-OAuth2-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google OAuth">
 <img src="https://img.shields.io/badge/BCrypt-Password%20Hashing-2F2F2F?style=for-the-badge" alt="BCrypt">
