@@ -1,0 +1,7 @@
+.git
+.gitignore
+.classpath
+.project
+.settings
+Servers
+*.log
