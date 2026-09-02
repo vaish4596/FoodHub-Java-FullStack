@@ -16,22 +16,22 @@ import com.tap.utility.DBConnection;
 public class OrderTableDAOImpl implements OrderTableDAO {
 
     private static final String INSERT_QUERY =
-            "INSERT INTO OrderTable(userId, restaurantId, orderDate, totalAmount, status, paymentMethod) VALUES (?, ?, ?, ?, ?, ?)";
+            "INSERT INTO ordertable(userId, restaurantId, orderDate, totalAmount, status, paymentMethod) VALUES (?, ?, ?, ?, ?, ?)";
 
     private static final String GET_QUERY =
-            "SELECT * FROM OrderTable WHERE orderId=?";
+            "SELECT * FROM ordertable WHERE orderId=?";
 
     private static final String GET_ALL_QUERY =
-            "SELECT * FROM OrderTable";
+            "SELECT * FROM ordertable";
 
     private static final String UPDATE_QUERY =
-            "UPDATE OrderTable SET userId=?, restaurantId=?, orderDate=?, totalAmount=?, status=?, paymentMethod=? WHERE orderId=?";
+            "UPDATE ordertable SET userId=?, restaurantId=?, orderDate=?, totalAmount=?, status=?, paymentMethod=? WHERE orderId=?";
 
     private static final String DELETE_QUERY =
-            "DELETE FROM OrderTable WHERE orderId=?";
+            "DELETE FROM ordertable WHERE orderId=?";
     
     private static final String GET_USER_ORDERS =
-            "SELECT * FROM OrderTable WHERE userId=? ORDER BY orderDate DESC";
+            "SELECT * FROM ordertable WHERE userId=? ORDER BY orderDate DESC";
 
     @Override
   

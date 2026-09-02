@@ -15,19 +15,19 @@ import com.tap.utility.DBConnection;
 public class RestaurantDAOImpl implements RestaurantDAO {
 
     private static final String INSERT_QUERY =
-            "INSERT INTO Restaurant(name, cuisineType, deliveryTime, address, rating, isActive, imagePath) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            "INSERT INTO restaurant(name, cuisineType, deliveryTime, address, rating, isActive, imagePath) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
     private static final String GET_QUERY =
-            "SELECT * FROM Restaurant WHERE restaurantId = ?";
+            "SELECT * FROM restaurant WHERE restaurantId = ?";
 
     private static final String GET_ALL_QUERY =
-            "SELECT * FROM Restaurant";
+            "SELECT * FROM restaurant";
 
     private static final String UPDATE_QUERY =
-            "UPDATE Restaurant SET name=?, cuisineType=?, deliveryTime=?, address=?, rating=?, isActive=?, imagePath=? WHERE restaurantId=?";
+            "UPDATE restaurant SET name=?, cuisineType=?, deliveryTime=?, address=?, rating=?, isActive=?, imagePath=? WHERE restaurantId=?";
 
     private static final String DELETE_QUERY =
-            "DELETE FROM Restaurant WHERE restaurantId=?";
+            "DELETE FROM restaurant WHERE restaurantId=?";
 
     @Override
     public void addRestaurant(Restaurant restaurant) {
@@ -146,7 +146,7 @@ public class RestaurantDAOImpl implements RestaurantDAO {
         List<Restaurant> restaurantList = new ArrayList<>();
 
         String SEARCH_QUERY =
-                "SELECT * FROM Restaurant WHERE name LIKE ? OR cuisineType LIKE ?";
+                "SELECT * FROM restaurant WHERE name LIKE ? OR cuisineType LIKE ?";
 
         try (Connection con = DBConnection.getConnection();
              PreparedStatement pstmt = con.prepareStatement(SEARCH_QUERY)) {
