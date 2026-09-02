@@ -30,3 +30,4 @@ google-oauth.properties
 
 # Database credentials
 application-local.properties
+FoodHub.war
