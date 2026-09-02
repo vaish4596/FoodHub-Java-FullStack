@@ -16,19 +16,19 @@ import com.tap.utility.DBConnection;
 public class UserDAOImpl implements UserDAO {
 
     private static final String INSERT_QUERY =
-            "INSERT INTO User(username,email,password,address,role,createdDate,lastLoginDate) VALUES(?,?,?,?,?,?,?)";
+            "INSERT INTO user(username,email,password,address,role,createdDate,lastLoginDate) VALUES(?,?,?,?,?,?,?)";
 
     private static final String GET_QUERY =
-            "SELECT * FROM User WHERE userId=?";
+            "SELECT * FROM user WHERE userId=?";
 
     private static final String GET_ALL_QUERY =
-            "SELECT * FROM User";
+            "SELECT * FROM user";
 
     private static final String UPDATE_QUERY =
-            "UPDATE User SET username=?, password=?, email=?, address=?, role=?, lastLoginDate=? WHERE userId=?";
+            "UPDATE user SET username=?, password=?, email=?, address=?, role=?, lastLoginDate=? WHERE userId=?";
 
     private static final String DELETE_QUERY =
-            "DELETE FROM User WHERE userId=?";
+            "DELETE FROM user WHERE userId=?";
 
     @Override
     public void addUser(User user) {
@@ -98,7 +98,7 @@ public class UserDAOImpl implements UserDAO {
 
         User user = null;
 
-        String sql = "SELECT * FROM User WHERE username=?";
+        String sql = "SELECT * FROM user WHERE username=?";
 
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
@@ -132,7 +132,7 @@ public class UserDAOImpl implements UserDAO {
     public User getUserByEmail(String email) {
 
         User user = null;
-        String sql = "SELECT * FROM User WHERE email=?";
+        String sql = "SELECT * FROM user WHERE email=?";
 
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
@@ -154,7 +154,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void updateUserProfile(User user) {
 
-        String sql = "UPDATE User SET username=?, email=?, address=?, role=? WHERE userId=?";
+        String sql = "UPDATE user SET username=?, email=?, address=?, role=? WHERE userId=?";
 
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
@@ -175,7 +175,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void updatePassword(int userId, String hashedPassword) {
 
-        String sql = "UPDATE User SET password=? WHERE userId=?";
+        String sql = "UPDATE user SET password=? WHERE userId=?";
 
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
@@ -192,7 +192,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void updateUser(User user) {
 
-        String sql = "UPDATE User SET username=?, email=?, password=?, address=?, role=?, lastLoginDate=? WHERE userId=?";
+        String sql = "UPDATE user SET username=?, email=?, password=?, address=?, role=?, lastLoginDate=? WHERE userId=?";
 
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
