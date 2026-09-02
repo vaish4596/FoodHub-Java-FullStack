@@ -7,7 +7,7 @@ COPY src/main/java /tmp/src
 COPY src/main/webapp/WEB-INF/lib /tmp/lib
 
 RUN mkdir -p /usr/local/tomcat/webapps/ROOT/WEB-INF/classes && \
-    javac -cp "/tmp/lib/*" \
+    javac -cp "/usr/local/tomcat/lib/*:/tmp/lib/*" \
     -d /usr/local/tomcat/webapps/ROOT/WEB-INF/classes \
     $(find /tmp/src -name "*.java")
 
